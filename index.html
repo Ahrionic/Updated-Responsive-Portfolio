@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+<style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {  
+    font-family: "Montserrat", sans-serif
+  }
+
+  .w3-row-padding img {
+    margin-bottom: 12px
+  }
+
+  .bgimg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('image/tree.jpg');
+    min-height: 100%;
+  }
+
+  .icon {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.bottom-right {
+  position: absolute;
+  bottom: -600px;
+  right: 38px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  background-color: black;
+}
+.bottom {
+  position: absolute;
+  bottom: -860px;
+  right: 38px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  background-color: black;
+}
+</style>
+
+<body>
+
+  <!-- Sidebar with image -->
+  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+    <div class="bgimg"></div>
+  </nav>
+
+  <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2"
+    id="mySidebar">
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright"
+      style="padding:0 12px;">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+      <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+      <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="w3-main w3-padding-large" style="margin-left:40%">
+
+    <!-- Menu icon to open sidebar -->
+    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;"
+      onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+    <!-- Header -->
+    <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+      <h1 class="w3-jumbo"><b>Korey Luu</b></h1>
+      <p>Full Stack Web Developer</p>
+      <img src="image/melol.jpg" class="w3-image w3-hide-large w3-hide-small w3-round"
+        style="display:block;width:30%;margin:auto;">
+      <img src="image/melol.jpg" class="w3-image w3-hide-medium w3-round" width="500"
+        height="700">
+    </header>
+
+    <!-- Portfolio Section -->
+    <div class="w3-padding-32 w3-content" id="portfolio">
+      <h2 class="w3-text-grey">My Portfolio</h2>
+      <hr class="w3-opacity">
+
+      <!-- Grid for photos -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+        <a href="https://github.com/Ahrionic?tab=repositories"><img src="image/github.jpg" alt="github repositories" style="width:100%; height: 60%"></a>
+        <p><b>Link above to my github repositories</b></p>
+        <p>Image links to all my current and past projects! Please look over them if you have any interest or feedback.
+           They will be labeled accordingly, projects will be posted on the right side. If you have any trouble using any of the apps
+          don't be afraid to contact me! </p>
+        </div>`
+
+          <div class="w3-half">
+            <a href="https://wreising.github.io/Kills-to-Killers/"><img src="image/code.jpg" alt="project 1"
+                style="width:100%; height: 60%"></a>
+            <div class="bottom-right">Project 1</div>
+            <a href="https://icardcreator.herokuapp.com/%22%3E"><img src="image/icard.jpg" alt="project 2"
+                style="width:100%; height: 60%"></a>
+            <div class="bottom">Project 2</div>
+          </div>
+        <!-- End photo grid -->
+      </div>
+      <!-- End Portfolio Section -->
+    </div>
+
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+      <h2>About</h2>
+      <!-- <img src="image/melol.jpg" style="width:50%"> -->
+      <hr class="w3-opacity">
+      <p>
+        This is a Responsive portfolio made be me to show case my current and past projects. I am an aspiring junior developer hoping to land a career in coding. I am hard working and learn very easily! I hope you enjoy my portfolio and apps! Please contact me and feel free to give feedback on my projects. There are links to my socials and linkdIn page at the bottom of the page. Thank you!! ~~ Korey Luu
+      </p>
+      <h3 class="w3-padding-16">My Skills</h3>
+      <p class="w3-wide">Web Design</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">Photoshop</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+      </div><br>
+
+      <a href="file/KoreyLuuResume.pdf" download="resume" >
+      <button id="btn" class="w3-button w3-light-grey w3-padding-large w3-section">
+        <i class="fa fa-download"></i>Download Resume
+      </button>
+      </a>
+
+      <!-- End About Section -->
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+      <h2>Contact Me</h2>
+      <hr class="w3-opacity">
+
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> California, US</p>
+        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: (949)-599-4139</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: koreyluu@gmail.com</p>
+      </div>
+
+      <p>Lets get in touch. Send me a message:</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject">
+        </p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message">
+        </p>
+        <p>
+          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+      <!-- End Contact Section -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+
+      <a href="https://twitter.com/Ahrionic" class="fa fa-twitter w3-hover-opacity icon"></a>
+      <a href="https://www.linkedin.com/in/korey-luu-b21640230/" class="fa fa-linkedin w3-hover-opacity icon"></a>
+      <a href="https://github.com/Ahrionic" class="fa fa-github w3-hover-opacity icon"></a>
+      <p class="w3-medium">Thank You for stopping by💜</p>
+      <!-- End footer -->
+    </footer>
+
+    <!-- END PAGE CONTENT -->
+  </div>
+
+  <script>
+    // Open and close sidebar
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "60%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+
+  </script>
+
+</body>
+
+</html>
