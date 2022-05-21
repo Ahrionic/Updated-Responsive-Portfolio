@@ -155,7 +155,7 @@
         <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
       </div><br>
 
-      <a href="file/KoreyLuuResume.pdf" download="resume" >
+      <a href="file/KOREY_LUU_RESUME.docx.pdf" download="resume" >
       <button id="btn" class="w3-button w3-light-grey w3-padding-large w3-section">
         <i class="fa fa-download"></i>Download Resume
       </button>
@@ -176,17 +176,19 @@
       </div>
 
       <p>Lets get in touch. Send me a message:</p>
-      <form action="/action_page.php" target="_blank">
+      <form onsubmit="sendEmail(); reset(); return false;">
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject">
+        <p><input id="email" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input id="subject" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject">
         </p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message">
+        <p><input id="body" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message">
         </p>
         <p>
+
           <button class="w3-button w3-light-grey w3-padding-large" type="submit">
             <i class="fa fa-paper-plane"></i> SEND MESSAGE
           </button>
+
         </p>
       </form>
       <!-- End Contact Section -->
@@ -205,6 +207,7 @@
     <!-- END PAGE CONTENT -->
   </div>
 
+<script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
     // Open and close sidebar
     function openNav() {
@@ -214,6 +217,19 @@
 
     function closeNav() {
       document.getElementById("mySidebar").style.display = "none";
+    }
+
+    function sendEmail(){
+      Email.send({
+        SecureToken: "8ea5517f-bcd9-4be6-9441-4c351fccd242",
+
+        To: 'Koreyluu@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: document.getElementById("subject").value,
+        Body: document.getElementById("body").value
+      }).then(
+        message => alert("Message has been sent!")
+      );
     }
 
   </script>
